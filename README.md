@@ -1,10 +1,11 @@
-# Note it - photo App
+# Note it - Note Manager App
 
 ## Tools
 
-- ReactJS
-- Firebase
-- Framer Motion
+- MeteorJS
+- MongoDB
+- BlazeJS
+- MaterializeCSS
 
 ## Demonstration
 
