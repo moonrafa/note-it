@@ -8,3 +8,20 @@ Template.body.helpers({
     return Notes.find({})
   }
 })
+
+Template.add.events({
+  'submit .add-form': function () {
+    e.preventDefault()
+    //get the input value
+    const target = e.target
+    const text = target.text.value
+
+    //insert into the collection
+    Notes.insert({ text, createdAt: new Date() })
+    //clear form
+    target.text.value = ''
+    //close modal
+
+    $('#addModal').modal('close')
+  }
+})
