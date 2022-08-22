@@ -7,6 +7,10 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
 </head>
 
 <body>
@@ -15,20 +19,27 @@
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">Note it</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
+          {{#if currentUser}}
           <li class="nav-item">
             <a class="waves-effect waves-light btn" href="#addModal">
               Add note
             </a>
           </li>
+          {{/if}}
+          <li class="nav-item">{{>loginButtons}}</li>
         </ul>
       </div>
     </div>
   </nav>
   <div class="container">
     <h2>Latest notes</h2>
+    {{#if currentUser}}
     <ul>
       {{#each notes}} {{>note}} {{/each}}
     </ul>
+    {{else}}
+    <p>Login or sign up to manage notes</p>
+    {{/if}}
   </div>
   {{> add}}
   <script>
@@ -38,7 +49,14 @@
   </script>
 </body>
 
-<template name="note"> <li class="collection-item">{{text}}</li> </template>
+<template name="note">
+  <li class="collection-item">
+    {{text}}: <strong> Added by {{username}}</strong>
+    <a href="#" class="delete-note secondary-content"
+      ><i class="material-icons">close</i></a
+    >
+  </li>
+</template>
 <template name="add">
   <div class="modal" id="addModal">
     <div class="modal-content">

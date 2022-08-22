@@ -24,3 +24,5 @@ insecure                # Allow all DB writes from clients (for prototyping)
 
 hot-module-replacement  # Update code in development without reloading the page
 blaze-hot               # Update files using Blaze's API with HMR
+accounts-ui
+accounts-password
