@@ -14,16 +14,17 @@
 </head>
 
 <body>
-  <nav class="red">
+  <nav class="blue lighten-2">
     <div class="container">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Note it</a>
+        <a href="#" class="brand-logo">Note<span class="dot">></span>it</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           {{#if currentUser}}
           <li class="nav-item">
             <a
-              class="waves-effect waves-light btn modal-trigger"
+              class="waves-effect waves-teal btn modal-trigger open-click"
               href="#addModal"
+              id="opense"
             >
               Add note
             </a>
@@ -35,7 +36,8 @@
     </div>
   </nav>
   <div class="container">
-    <h2>Latest notes</h2>
+    <h4>Latest notes</h4>
+
     {{#if currentUser}}
     <ul class="collection">
       {{#each notes}} {{>note}} {{/each}}
@@ -49,7 +51,7 @@
 
 <template name="note">
   <li class="collection-item">
-    {{text}}: <strong> Added by {{username}}</strong>
+    {{text}}: <strong class="added-by"> Added by {{username}}</strong>
     <a href="#" class="delete-note secondary-content"
       ><i class="material-icons">close</i></a
     >
@@ -66,7 +68,7 @@
     <div class="modal-footer">
       <a
         href="#"
-        class="modal-action modal-close waves-effect waves-green btn-flat"
+        class="modal-action modal-close waves-effect waves-teal btn-flat"
         >close</a
       >
     </div>

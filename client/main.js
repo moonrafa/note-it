@@ -14,7 +14,7 @@ Accounts.ui.config({
 Template.body.helpers({
   /*  notes: [{ text: 'My note 1' }, { text: 'My note 2' }, { text: 'My note 3' }]*/
   notes() {
-    return Notes.find({})
+    return Notes.find({}, { sort: { createdAt: -1 } })
   }
 })
 document.addEventListener('DOMContentLoaded', function () {
@@ -42,6 +42,9 @@ Template.add.events({
     //clear form
     target.text.value = ''
     //close modal
+    var elem = document.querySelector('.modal')
+    const instance = M.Modal.init(elem, { dismissible: false })
+    instance.close()
   }
 })
 

@@ -2,3 +2,25 @@ body {
   padding: 10px;
   font-family: sans-serif;
 }
+a#opense {
+  background-color: white !important;
+  color: #64b5f6 !important;
+  font-weight: 500;
+}
+a#opense:hover {
+  background-color: #64b5f6 !important;
+  color: white !important;
+}
+.dot {
+  color: black;
+}
+.notealt {
+  color: #64b5f6;
+}
+.added-by {
+  color: #64b5f6;
+}
+.latest-notes {
+  width: 2.28rem;
+  height: 2.28rem;
+}

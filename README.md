@@ -9,10 +9,14 @@
 
 ## Demonstration
 
-<img src="src/demo.png">
+<img src="assets/demo.png">
 
 ## Author
 
 Rafaelly Rodrigues
 
 - @moonrafa
+
+## Database
+
+<img src="assets/db.png">
