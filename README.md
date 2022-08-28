@@ -16,7 +16,3 @@
 Rafaelly Rodrigues
 
 - @moonrafa
-
-## Database
-
-<img src="assets/db.png">
